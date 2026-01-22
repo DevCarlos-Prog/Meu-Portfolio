@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Adventure | Tela Inicial</title>
+    <style> 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .start-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #6200ee;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+        }
+
+        .start-btn:hover {
+            background-color: #3700b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <img style="height: 100%; width: 100%; position: fixed; top: 0; left: 0; z-index: -1; object-fit: cover;" src="img/Rzib.gif" alt="Espaço">
+    <div class="container">
+        <h1>Space Adventure</h1>
+        <button class="start-btn" onclick="startFunction()">Start</button>
+    </div>
+    <script>
+        function startFunction() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="gradient-title">Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header data-aos="fade-down">
+        <h1 style="color: black;">Bem-vindo ao Meu Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre" data-aos="fade-up">
+        <div class="sobre-texto" data-aos="fade-right">
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou Desenvolvedor Front-end Júnior focado em criar interfaces web funcionais,
+                responsivas e bem estruturadas. Trabalho principalmente com JavaScript puro
+                e aplico conceitos de UX/UI para melhorar a experiência do usuário.
+                Utilizo Inteligência Artificial como ferramenta de produtividade no
+                desenvolvimento e estudo constantemente para evoluir na área.
+            </p>
+        </div>
+
+        <div class="sobre-imagem" data-aos="fade-left">
+            <img src="img/Foto de Perfil.jpeg" alt="Foto de Perfil">
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos">
+        <h2 class="titulo-projetos" data-aos="fade-up">Meus Projetos</h2>
+
+        <div class="projetos-grid">
+
+            <!-- Projeto 1 -->
+            <div class="projeto-card" data-aos="zoom-in">
+                <h3>Space Adventure (React)</h3>
+                <p>
+                    Jogo desenvolvido em React com auxílio de Inteligência Artificial,
+                    focado em lógica de programação e interatividade.
+                </p>
+
+                <div class="tecnologias">
+                    <span><img src="img/react.png" alt="React"> React</span>
+                    <span><img src="img/js.png" alt="JavaScript"> JavaScript</span>
+                    <span><img src="img/vite.png" alt="Vite"> Vite</span>
+                </div>
+
+                <div class="projeto-links">
+                    <a href="https://space-adventure-react.vercel.app/" target="_blank">
+                        Ver Projeto
+                    </a>
+                    <a href="https://github.com/seugithub/space-adventure-react" target="_blank">
+                        Código
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="projeto-card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Lista de Afazeres</h3>
+                <p>
+                    Aplicação para organização de tarefas com CRUD e armazenamento local.
+                </p>
+
+                <div class="tecnologias">
+                    <span><img src="img/html.png" alt="HTML"> HTML</span>
+                    <span><img src="img/css.png" alt="CSS"> CSS</span>
+                    <span><img src="img/js.png" alt="JavaScript"> JavaScript</span>
+                </div>
+
+                <div class="projeto-links">
+                    <a href="lista/index.html" target="_blank">Ver Projeto</a>
+                    <a href="https://github.com/DevCarlos-Prog" target="_blank">Código</a>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="projeto-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Projeto Livros</h3>
+
+                <p>
+                    Aplicação web para visualização e busca de livros, com foco em organização
+                    de informações e experiência do usuário.
+                </p>
+
+                <div class="tecnologias">
+                    <span><img src="img/html.png" alt="HTML"> HTML</span>
+                    <span><img src="img/css.png" alt="CSS"> CSS</span>
+                    <span><img src="img/js.png" alt="JavaScript"> JavaScript</span>
+                </div>
+
+                <div class="projeto-links">
+                    <a href="Projeto-Livros/index.html" target="_blank">
+                        Ver Projeto
+                    </a>
+                    <a href="https://github.com/DevCarlos-Prog" target="_blank">
+                        Código
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" data-aos="fade-up">
+        <h2 class="titulo-contato">Contato</h2>
+
+        <p class="texto-contato">
+            Estou aberto a oportunidades de estágio, projetos freelancer ou colaborações.
+            Fique à vontade para entrar em contato comigo pelos canais abaixo.
+        </p>
+
+        <div class="contato-links">
+            <a href="https://wa.me/qr/VW6CDTOMLQSIE1" target="_blank" class="whatsapp"
+               data-aos="fade-up" data-aos-delay="100">
+                <img src="img/whatsapp.png" alt="WhatsApp">
+                <span>WhatsApp</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/carlos-wagner-4162712b1/" target="_blank"
+               class="linkedin" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/linkedin.png" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script>
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>

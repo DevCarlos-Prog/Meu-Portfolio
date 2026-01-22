@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+#game-area {
+    width: 800px;
+    height: 600px;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-image: url('img/nave-espacial.png');
+    /* Caminho para a sua imagem */
+    background-size: cover;
+    /* Ajusta a imagem para cobrir todo o elemento */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    /* Se você quer manter a forma circular */
+}
+
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 40px;
+    color: white;
+}
+
+.item,
+.obstacle,
+.upgrade {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.item {
+    width: 30px;
+    height: 30px;
+    background-image: url('img/cifrao.png');
+    /* Caminho para a imagem do item */
+    background-size: cover;
+    /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center;
+    /* Centraliza a imagem dentro do elemento */
+    border-radius: 50%;
+    /* Mantém a forma circular */
+}
+
+.obstacle {
+    width: 50px;
+    height: 50px;
+    background-image: url('img/meteoro.png');
+    /* Caminho para a imagem do obstáculo */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.upgrade {
+    width: 30px;
+    height: 30px;
+    background-image: url('img/nitro.png');
+    /* Caminho para a imagem do upgrade */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+
+#upgrade-timer {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 200px;
+    height: 20px;
+    border: 2px solid #fff;
+    background-color: rgb(68, 168, 68);
+    
+}
+
+#game-over-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tela,
+.restart {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+.tela:hover,
+.restart:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

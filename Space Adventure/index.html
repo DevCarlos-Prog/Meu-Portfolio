@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img style="height: 100%; width: 100%;" src="img/Rzib.gif" alt="">
+    <div id="game-area">
+        <div id="player"></div>
+    </div>
+    <div id="score">Pontuação: 0</div>
+    <div id="upgrade-timer" style="display: none;">
+        <div id="upgrade-timer-bar"></div>
+    </div>
+    <div id="game-over-screen" style="display: none;">
+        <h1>Game Over!</h1>
+        <p>Pontuação: <span id="final-score"></span></p>
+        <button class="restart" onclick="restartGame()">Recomeçar</button>
+        <button class="tela" onclick="goToHome()">Tela Inicial</button>
+    </div>
+<script src="script.js"></script>
+    
+</body>
+
+</html>

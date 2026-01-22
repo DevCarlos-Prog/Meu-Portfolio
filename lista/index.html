@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Afazeres do Dia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Afazeres do Dia</h1>
+    <div class="todo-app">
+      <div class="input-section">
+        <input type="text" id="task-input" placeholder="Adicionar nova tarefa">
+        <button id="add-btn">Adicionar</button>
+      </div>
+      <div class="filters">
+        <button id="all-btn" class="active">Todos</button>
+        <button id="completed-btn">Completos</button>
+        <button id="incomplete-btn">Incompletos</button>
+      </div>
+      <ul id="task-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
